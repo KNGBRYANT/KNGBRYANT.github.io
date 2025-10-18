@@ -1,1 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lawal Mayowa Bryant | Marine Engineer & Data Analyst</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .vanta-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.15;
+        }
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+        .stats-counter {
+            transition: all 0.5s ease;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <div id="vanta-bg" class="vanta-bg"></div>
 
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white bg-opacity-90 shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold text-blue-800">Lawal Mayowa Bryant</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-blue-800 hover:text-blue-600 transition">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 transition">About</a>
+                    <a href="#skills" class="text-gray-700 hover:text-blue-600 transition">Skills</a>
+                    <a href="#projects" class="text-gray-700 hover:text-blue-600 transition">Projects</a>
+                    <a href="#certifications" class="text-gray-700 hover:text-blue-600 transition">Certifications</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 transition">Contact</a>
+                    <button class="bg-gradient-to-r from-blue-600 to-blue-800 text-white px-4 py-2 rounded-full hover:shadow-lg transition-all">
+                        Download CV <i data-feather="download" class="inline"></i>
+                    </button>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-700">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-white z-40 pt-16">
+        <div class="flex flex-col space-y-4 p-4">
+            <a href="#home" class="text-blue-800 text-lg py-2">Home</a>
+            <a href="#about" class="text-gray-700 text-lg py-2">About</a>
+            <a href="#skills" class="text-gray-700 text-lg py-2">Skills</a>
+            <a href="#projects" class="text-gray-700 text-lg py-2">Projects</a>
+            <a href="#certifications" class="text-gray-700 text-lg py-2">Certifications</a>
+            <a href="#contact" class="text-gray-700 text-lg py-2">Contact</a>
+            <button class="bg-gradient-to-r from-blue-600 to-blue-800 text-white px-4 py-3 rounded-full mt-4">
+                Download CV <i data-feather="download" class="inline"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center pt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                        Turning Data into Insight.<br>
+                        Turning Insight into <span class="text-blue-800">Impact.</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8">
+                        I am a Marine Engineering graduate transitioning into Data Analysis, passionate about transforming data into meaningful insights using Power BI, SQL, Excel, Python, and AI-driven solutions.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#projects" class="bg-gradient-to-r from-blue-600 to-blue-800 text-white px-6 py-3 rounded-full hover:shadow-lg transition-all">
+                            View My Projects
+                        </a>
+                        <a href="#" class="border-2 border-blue-800 text-blue-800 px-6 py-3 rounded-full hover:bg-blue-50 transition-all">
+                            Download My CV
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <div class="w-64 h-64 md:w-80 md:h-80 bg-blue-100 rounded-full overflow-hidden border-8 border-white shadow-xl">
+                            <img src="https://huggingface.co/spaces/JustBryant001/oceanic-data-voyager/resolve/main/images/WhatsApp%20Image%202025-09-07%20at%2010.58.54%20PM.jpeg" alt="Lawal Mayowa Bryant" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -bottom-5 -right-5 bg-yellow-500 text-white px-4 py-2 rounded-full shadow-lg">
+                            <i data-feather="award" class="inline mr-2"></i> Data Analyst | Marine Engineering Graduate
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-blue-600 stats-counter">
+                    <h3 class="text-3xl font-bold text-blue-800 mb-2" data-count="10">0</h3>
+                    <p class="text-gray-600">Data Projects</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-blue-600 stats-counter">
+                    <h3 class="text-3xl font-bold text-blue-800 mb-2" data-count="98">0</h3>
+                    <p class="text-gray-600">Engine Uptime Optimization</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-blue-600 stats-counter">
+                    <h3 class="text-3xl font-bold text-blue-800 mb-2" data-count="400">0</h3>
+                    <p class="text-gray-600">Field Surveys</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-blue-600 stats-counter">
+                    <h3 class="text-3xl font-bold text-blue-800 mb-2" data-count="15">0</h3>
+                    <p class="text-gray-600">AI Dashboards</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-blue-800 mb-4">About Me</h2>
+                <div class="w-20 h-1 bg-yellow-500 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <p class="text-lg text-gray-700 mb-6">
+                            I am a Marine Engineering graduate turned Data Analyst and AI enthusiast with a passion for transforming raw data into actionable insights. My background combines engineering systems thinking with analytical problem-solving, allowing me to design and deploy data-driven dashboards, predictive models, and automation tools.
+                        </p>
+                        <p class="text-lg text-gray-700 mb-8">
+                            I thrive at the intersection of engineering, data, and technology, using tools like Power BI, Excel, SQL, Python, and Streamlit to analyze, visualize, and optimize performance from maritime operations to business intelligence solutions.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full">Marine Engineer</span>
+                            <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full">Data Analyst</span>
+                            <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full">AI & ML Developer</span>
+                            <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full">Power BI Expert</span>
+                            <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full">Python Developer</span>
+                        </div>
+                        <button class="bg-gradient-to-r from-blue-600 to-blue-800 text-white px-6 py-3 rounded-full hover:shadow-lg transition-all">
+                            Download Full CV <i data-feather="download" class="inline"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="md:w-1/2 md:pl-10">
+                    <div class="relative">
+                        <div class="bg-white p-4 rounded-xl shadow-lg">
+                            <img src="http://static.photos/technology/1024x576/123" alt="Data Dashboard Example" class="rounded-lg w-full h-auto">
+                            <div class="absolute -bottom-5 -right-5 bg-white p-3 rounded-lg shadow-lg">
+                                <i data-feather="bar-chart-2" class="text-blue-800 w-8 h-8"></i>
+                            </div>
+                        </div>
+                        <div class="absolute -top-5 -left-5 bg-white p-3 rounded-lg shadow-lg">
+                            <i data-feather="cpu" class="text-yellow-500 w-8 h-8"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-blue-800 mb-4">Skills & Expertise</h2>
+                <div class="w-20 h-1 bg-yellow-500 mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Data Analysis & Visualization -->
+                <div class="skill-card bg-white p-6 rounded-xl shadow-md border-t-4 border-blue-600 transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i data-feather="bar-chart-2" class="text-blue-800"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-800">Data Analysis & Visualization</h3>
+                    </div>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-green-500 mr-2"></i>
+                            <span>Power BI</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-green-500 mr-2"></i>
+                            <span>Microsoft Excel</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-green-500 mr-2"></i>
+                            <span>Data Cleaning & Modeling</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-green-500 mr-2"></i>
+                            <span>DAX & Data Storytelling</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Programming & Machine Learning -->
+                <div class="skill-card bg-white p-6 rounded-xl shadow-md border-t-4 border-blue-600 transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i data-feather="code" class="text-blue-800"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-800">Programming & ML</h3>
+                    </div>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-green-500 mr-2"></i>
+                            <span>Python (Pandas, NumPy)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-green-500 mr-2"></i>
+                            <span>Streamlit App Development</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-green-500 mr-2"></i>
+                            <span>SQL for Data Analysis</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-green-500 mr-2"></i>
+                            <span>Predictive Modeling</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Engineering & Technical Systems -->
+                <div class="skill-card bg-white p-6 rounded-xl shadow-md border-t-4 border-blue-600 transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i data-feather="settings" class="text-blue-800"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-800">Engineering Systems</h3>
+                    </div>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-green-500 mr-2"></i>
+                            <span>Marine Systems Diagnostics</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-green-500 mr-2"></i>
+                            <span>Preventive Maintenance</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-green-500 mr-2"></i>
+                            <span>Process Monitoring</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-green-500 mr-2"></i>
+                            <span>Fault Detection</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- AI & Prompt Engineering -->
+                <div class="skill-card bg-white p-6 rounded-xl shadow-md border-t-4 border-blue-600 transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-3 rounded-full mr-4">
+                            <i data-feather="cpu" class="text-blue-800"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-800">AI & Prompt Engineering</h3>
+                    </div>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-green-500 mr-2"></i>
+                            <span>Prompt Design & Optimization</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-green-500 mr-2"></i>
+                            <span>Contextual Prompting</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-green-500 mr-2"></i>
+                            <span>AI Integration into Workflows</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-feather="check" class="text-green-500 mr-2"></i>
+                            <span>Evaluation & Fine-Tuning of AI Outputs</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-blue-800 mb-4">Featured Projects</h2>
+                <div class="w-20 h-1 bg-yellow-500 mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Insurance Risk Dashboard -->
+                <div class="project-card bg-white rounded-xl shadow-md overflow-hidden relative">
+                    <img src="https://huggingface.co/spaces/JustBryant001/oceanic-data-voyager/resolve/main/images/Screenshot%202025-10-14%20021355.png" alt="Insurance Risk Dashboard" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <div class="bg-blue-100 p-2 rounded-full mr-3">
+                                <i data-feather="dollar-sign" class="text-blue-800 w-4 h-4"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-blue-800">Insurance Risk & Claims Analysis</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Created an interactive Power BI dashboard to visualize policy trends, claim patterns, and customer demographics with actionable insights.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Power BI</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">DAX</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Data Modeling</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Risk Analysis</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-blue-800 hover:text-blue-600 flex items-center">
+                                <i data-feather="linkedin" class="w-4 h-4 mr-1"></i> View on LinkedIn
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-overlay absolute inset-0 bg-blue-800 bg-opacity-90 flex items-center justify-center opacity-0 transition-opacity duration-300">
+                        <div class="text-center p-6 text-white">
+                            <h4 class="text-xl font-bold mb-2">Key Features</h4>
+                            <ul class="text-left space-y-2">
+                                <li class="flex items-start">
+                                    <i data-feather="check" class="mr-2 mt-1"></i>
+                                    <span>Advanced customer segmentation</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-feather="check" class="mr-2 mt-1"></i>
+                                    <span>Interactive risk assessment visualization</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-feather="check" class="mr-2 mt-1"></i>
+                                    <span>Claims prediction model with 92% accuracy</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+<!-- EPL Dashboard Project -->
+                <div class="project-card bg-white rounded-xl shadow-md overflow-hidden relative">
+                    <img src="https://huggingface.co/spaces/JustBryant001/oceanic-data-voyager/resolve/main/images/Screenshot%202025-10-14%20022819.png" alt="EPL Dashboard" class="w-full h-48 object-cover">
+<div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <div class="bg-blue-100 p-2 rounded-full mr-3">
+                                <i data-feather="bar-chart-2" class="text-blue-800 w-4 h-4"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-blue-800">EPL Player Statistics Dashboard</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Interactive Power BI dashboard visualizing Premier League player stats across 7 seasons with goals, assists, passing and performance trends.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Power BI</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Power Query</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Excel</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">GitHub</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="https://github.com/KNGBRYANT/EPL-Dashboard/tree/main" class="text-blue-800 hover:text-blue-600 flex items-center">
+                                <i data-feather="github" class="w-4 h-4 mr-1"></i> GitHub Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-overlay absolute inset-0 bg-blue-800 bg-opacity-90 flex items-center justify-center opacity-0 transition-opacity duration-300">
+                        <div class="text-center p-6 text-white">
+                            <h4 class="text-xl font-bold mb-2">Key Features</h4>
+                            <ul class="text-left space-y-2">
+                                <li class="flex items-start">
+                                    <i data-feather="check" class="mr-2 mt-1"></i>
+                                    <span>7 seasons of player stats (2017-2024)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-feather="check" class="mr-2 mt-1"></i>
+                                    <span>Interactive filters by season/player/position</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-feather="check" class="mr-2 mt-1"></i>
+                                    <span>Dual-page design for summary and insights</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-feather="check" class="mr-2 mt-1"></i>
+                                    <span>Goals, assists, passes and discipline metrics</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+<!-- Boiler Fault Detection Project -->
+                <div class="project-card bg-white rounded-xl shadow-md overflow-hidden relative">
+                    <img src="http://static.photos/technology/640x360/2" alt="Boiler Fault Detection" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <div class="bg-blue-100 p-2 rounded-full mr-3">
+                                <i data-feather="alert-triangle" class="text-blue-800 w-4 h-4"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-blue-800">AI-Powered Boiler Fault Detection</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Designed and deployed a predictive ML dashboard to detect boiler faults using sensor input data, enhancing preventive maintenance.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Streamlit</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Python</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Random Forest</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-blue-800 hover:text-blue-600 flex items-center">
+                                <i data-feather="external-link" class="w-4 h-4 mr-1"></i> Live Demo
+                            </a>
+                            <a href="#" class="text-blue-800 hover:text-blue-600 flex items-center">
+                                <i data-feather="github" class="w-4 h-4 mr-1"></i> GitHub Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-overlay absolute inset-0 bg-blue-800 bg-opacity-90 flex items-center justify-center opacity-0 transition-opacity duration-300">
+                        <div class="text-center p-6 text-white">
+                            <h4 class="text-xl font-bold mb-2">Key Features</h4>
+                            <ul class="text-left space-y-2">
+                                <li class="flex items-start">
+                                    <i data-feather="check" class="mr-2 mt-1"></i>
+                                    <span>Early fault detection system</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-feather="check" class="mr-2 mt-1"></i>
+                                    <span>Reduced downtime by 30%</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-feather="check" class="mr-2 mt-1"></i>
+                                    <span>Interactive visualization</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+<!-- Project 4 -->
+                <div class="project-card bg-white rounded-xl shadow-md overflow-hidden relative">
+                    <img src="http://static.photos/technology/640x360/4" alt="COVID-19 Dashboard" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <div class="bg-blue-100 p-2 rounded-full mr-3">
+                                <i data-feather="thermometer" class="text-blue-800 w-4 h-4"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-blue-800">COVID-19 Data Analytics Dashboard</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Built a dynamic dashboard analyzing global COVID-19 trends, recovery rates, and top affected regions.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Python</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Pandas</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Streamlit</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-blue-800 hover:text-blue-600 flex items-center">
+                                <i data-feather="external-link" class="w-4 h-4 mr-1"></i> Live Demo
+                            </a>
+                            <a href="#" class="text-blue-800 hover:text-blue-600 flex items-center">
+                                <i data-feather="github" class="w-4 h-4 mr-1"></i> GitHub Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-overlay absolute inset-0 bg-blue-800 bg-opacity-90 flex items-center justify-center opacity-0 transition-opacity duration-300">
+                        <div class="text-center p-6 text-white">
+                            <h4 class="text-xl font-bold mb-2">Key Features</h4>
+                            <ul class="text-left space-y-2">
+                                <li class="flex items-start">
+                                    <i data-feather="check" class="mr-2 mt-1"></i>
+                                    <span>Global case tracking</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-feather="check" class="mr-2 mt-1"></i>
+                                    <span>Trend analysis</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-feather="check" class="mr-2 mt-1"></i>
+                                    <span>Interactive maps</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-blue-800 mb-4">Certifications</h2>
+                <div class="w-20 h-1 bg-yellow-500 mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-md flex flex-col items-center text-center">
+                    <div class="bg-blue-100 p-4 rounded-full mb-4">
+                        <i data-feather="shield" class="text-blue-800 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-blue-800 mb-2">Cisco</h3>
+                    <p class="text-gray-600 text-sm">Data Analysis Essentials</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md flex flex-col items-center text-center">
+                    <div class="bg-blue-100 p-4 rounded-full mb-4">
+                        <i data-feather="code" class="text-blue-800 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-blue-800 mb-2">Python & ML</h3>
+                    <p class="text-gray-600 text-sm">Intro to Python, Pandas & Machine Learning</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md flex flex-col items-center text-center">
+                    <div class="bg-blue-100 p-4 rounded-full mb-4">
+                        <i data-feather="database" class="text-blue-800 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-blue-800 mb-2">Kaggle</h3>
+                    <p class="text-gray-600 text-sm">SQL for Data Analysis</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md flex flex-col items-center text-center">
+                    <div class="bg-blue-100 p-4 rounded-full mb-4">
+                        <i data-feather="lock" class="text-blue-800 w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-blue-800 mb-2">Cybersecurity</h3>
+                    <p class="text-gray-600 text-sm">OPSWAT, TryHackMe, Forage</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-blue-800 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Let's Connect</h2>
+                <div class="w-20 h-1 bg-yellow-500 mx-auto"></div>
+            </div>
+
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h3 class="text-xl font-bold mb-6">Get in Touch</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-blue-700 p-3 rounded-full mr-4">
+                                <i data-feather="mail" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Email</h4>
+                                <a href="mailto:lawalmayowa95@gmail.com" class="hover:text-yellow-300 transition">lawalmayowa95@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-700 p-3 rounded-full mr-4">
+                                <i data-feather="linkedin" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">LinkedIn</h4>
+                                <a href="https://www.linkedin.com/in/lawal-mayowa-160bb930b/" class="hover:text-yellow-300 transition">linkedin.com/in/lawal-mayowa-160bb930b</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-700 p-3 rounded-full mr-4">
+                                <i data-feather="github" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">GitHub</h4>
+                            <a href="https://github.com/KNGBRYANT" class="hover:text-yellow-300 transition">github.com/KNGBRYANT</a>
+</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 md:pl-10">
+                    <h3 class="text-xl font-bold mb-6">Send Me a Message</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block mb-1">Name</label>
+                            <input type="text" id="name" class="w-full bg-blue-700 border border-blue-600 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block mb-1">Email</label>
+                            <input type="email" id="email" class="w-full bg-blue-700 border border-blue-600 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                        </div>
+                        <div>
+                            <label for="message" class="block mb-1">Message</label>
+                            <textarea id="message" rows="4" class="w-full bg-blue-700 border border-blue-600 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-yellow-500"></textarea>
+                        </div>
+                        <button type="submit" class="bg-yellow-500 text-blue-900 font-bold px-6 py-3 rounded-lg hover:bg-yellow-400 transition">
+                            Send Message <i data-feather="send" class="inline ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="#" class="hover:text-yellow-300 transition">
+                    <i data-feather="linkedin"></i>
+                </a>
+                <a href="#" class="hover:text-yellow-300 transition">
+                    <i data-feather="github"></i>
+                </a>
+                <a href="#" class="hover:text-yellow-300 transition">
+                    <i data-feather="mail"></i>
+                </a>
+            </div>
+            <p class="text-sm">© 2025 Lawal Mayowa Bryant | Built with Passion and Data</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Vanta.js waves background
+        VANTA.WAVES({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x3b82f6,
+            shininess: 23.00,
+            waveHeight: 15.00,
+            waveSpeed: 0.50,
+            zoom: 0.75
+        });
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+            feather.replace();
+        });
+
+        // Animate stats counters
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stats-counter h3');
+            const speed = 200;
+            
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-count');
+                const count = +counter.innerText;
+                const increment = target / speed;
+                
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(animateCounters, 1);
+                } else {
+                    counter.innerText = target;
+                }
+            });
+        }
+
+        // Initialize when page loads
+        window.addEventListener('load', function() {
+            feather.replace();
+            animateCounters();
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
